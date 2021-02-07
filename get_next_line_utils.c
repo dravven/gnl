@@ -14,17 +14,6 @@ char        *ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-void		ft_bzero(void *b, size_t n)
-{
-	unsigned char	*dest;
-	size_t			i;
-
-	dest = b;
-	i = 0;
-	while (i++ < n)
-		*dest++ = 0;
-}
-
 int	ft_strlen(char const *str)
 {
 	int i;
@@ -35,6 +24,19 @@ int	ft_strlen(char const *str)
 			i++;
 	return (i);
 }
+
+void		ft_bzero(void *b, size_t n)
+{
+	unsigned char	*dest;
+	size_t			i;
+
+	dest = (unsigned char*)b;
+	i = 0;
+	while (i++ < n)
+		*dest++ = 0;
+}
+
+
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
